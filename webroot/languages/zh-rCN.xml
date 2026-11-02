@@ -116,4 +116,11 @@
   <!-- Credits -->
   <string id="contrib_label">贡献者：</string>
   <string id="translators_label">翻译人员：</string>
+  <string id="select_packages_label">选择应用</string>
+  <string id="select_packages_title">选择包名</string>
+  <string id="show_system_apps_label">显示系统应用</string>
+  <string id="select_all_label">全选</string>
+  <string id="deselect_all_label">取消全选</string>
+  <string id="add_label">添加</string>
+  <string id="no_packages_configured_label">未配置包名，请点击“选择应用”添加。</string>
 </language>

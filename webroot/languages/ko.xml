@@ -132,4 +132,11 @@
   <string id="import_config_label">설정 가져오기</string>
   <string id="import_warning_label">설정을 가져오면 현재 설정이 덮어씌워집니다. 계속 진행하시겠습니까?</string>
   <string id="import_backup_label">현재 설정 백업</string>
+  <string id="select_packages_label">Select Packages</string>
+  <string id="select_packages_title">Select Packages</string>
+  <string id="show_system_apps_label">Show system apps</string>
+  <string id="select_all_label">Select all</string>
+  <string id="deselect_all_label">Deselect all</string>
+  <string id="add_label">Add</string>
+  <string id="no_packages_configured_label">No packages configured. Click 'Select Packages' to add.</string>
 </language>
