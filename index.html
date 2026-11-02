@@ -87,7 +87,7 @@
 	</div>-->
 	<main class="max-h-screen relative overflow-auto text-base" data-router-wrapper>
 		<div class="pb-14" data-router-view="home">
-			<div class="flex justify-between items-center mx-auto ml-4 pt-5 mr-4">
+			<div class="flex justify-between items-center mx-auto px-4 pt-5 w-full max-w-lg">
 				<div class="flex flex-col">
 					<h1 class="font-bold text-6xl text-white font-amongus">SUSFS A</h1>
 					<h3 class="text-2xl text-balance text-white" data-i18n="app_title">WebUI menu</h3>
@@ -99,7 +99,7 @@
 					<a href="credits.html" class="text-white"><button class="btn btn-md btn-outline text-base border-white bg-cyan-100/20 dark:bg-black/20 backdrop-blur-[2.5px] mt-2 text-white h-auto" data-i18n="about_label">about</button></a>
 				</div>
 			</div>
-			<section class="flex flex-col justify-start items-center min-h-fit ml-4 mr-4 uppercase">
+			<section class="flex flex-col justify-start items-center min-h-fit mx-auto px-4 w-full max-w-lg uppercase">
 				<div class="w-full mt-5">
 					<div class="grid grid-cols-2 gap-3 sm:grid-cols-4 w-full">
 						<!-- SUS PATH Card -->
@@ -139,7 +139,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="stats flex flex-col divide-x-0 divide-y-0 items-center justify-center white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-2 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px]">
+				<div class="stats flex flex-col divide-x-0 divide-y-0 items-center justify-center white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-2 border-white backdrop-blur-[2.5px] w-full">
 					<div class="stat p-0 mt-0">
 						<div class="form-control">
 							<label class="label cursor-pointer">
@@ -175,8 +175,8 @@
 					<a href="custom.html" class="text-white"><button class="btn btn-md btn-outline text-base border-white mt-2 text-white" data-i18n="susfs_settings_label">custom susfs settings</button></a>
 					<a href="status.html" class="text-white hidden" id="susfs_kernel_status"><button class="btn btn-md btn-outline text-base border-white mt-2 text-white" data-i18n="susfs_kernel_status_label">SUSFS Kernel Status</button></a>
 				</div>
-				<div id="sus_su_154" class="min-w-full sm:min-w-[400px]">
-				  <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px]">
+				<div id="sus_su_154" class="w-full">
+				  <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] w-full">
 						<div class="text-white text-xl font-bold mb-3" data-i18n="auto_hide_label">auto hide settings</div>
 						<div id="auto_mount_toggle" class="form-control hidden">
 						<label class="label cursor-pointer">
@@ -234,7 +234,7 @@
 						</div>
 				    </div>
 				</div>
-				<div class="stats flex flex-col bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px]">
+				<div class="stats flex flex-col bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 border-white backdrop-blur-[2.5px] w-full">
 					<div class="stat">
 						<div class="stat-title text-lg text-white" data-i18n="kernel_uname_label">Kernel Uname</div>
 						<p class="text-white text-sm break-all font-sans normal-case font-normal" id="kernel_version"></p>
@@ -250,12 +250,12 @@
 						</div>
 						<div class="stat-title text-base text-white" data-i18n="spoof_kernel_version_label">Spoof Kernel Version</div>
 						<div class="flex items-center gap-2">
-							<input type="text" id="sus_uname" placeholder="default" class="input input-sm text-sm font-sans flex-1 font-normal"/>
+							<input type="text" id="sus_uname" placeholder="default" class="input input-sm text-sm font-sans flex-1 min-w-0 font-normal"/>
 							<input type="checkbox" id="sus_uname_checkbox" class="checkbox checkbox-sm checkbox-primary"/>
 						</div>
 						<div class="stat-title text-base text-white" data-i18n="spoof_kernel_build_label">Spoof Kernel Build</div>
 						<div class="flex items-center gap-2">
-							<input type="text" id="sus_uname_build" placeholder="default" class="input input-sm text-sm font-sans flex-1 font-normal"/>
+							<input type="text" id="sus_uname_build" placeholder="default" class="input input-sm text-sm font-sans flex-1 min-w-0 font-normal"/>
 							<input type="checkbox" id="sus_uname_build_checkbox" class="checkbox checkbox-sm checkbox-primary"/>
 						</div>
 						<div class="form-control">
@@ -270,13 +270,13 @@
 							<input type="checkbox" id="uname-spoof-on-postfsdata" class="checkbox checkbox-sm checkbox-primary" checked="checked"/>
 							</label>
 						</div>
-						<div class="flex flex-row gap-4">
+						<div class="flex flex-row flex-wrap gap-2">
 						<button class="btn btn-md btn-outline w-24 mt-2 border-white text-white text-sm font-normal" id="set_uname">Make it SuS</button>
 						<button class="btn btn-md btn-outline w-auto mt-2 border-white text-white text-sm font-normal" id="set_stock_kernel_build_date" data-i18n="set_stock_kernel_build_date_label">Set Stock Kernel Build Date</button>
 						</div>
 					</div>
 				</div>
-				<div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-3 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px]">
+				<div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-3 border-white backdrop-blur-[2.5px] w-full">
 					<div class="stat-title pb-2 text-lg text-white" data-i18n="danger_zone_label">Danger Zone</div>
 					<div class="form-control">
 						<button class="btn btn-md btn-outline w-full mt-2 border-white text-white text-sm font-normal font-sans" id="susfs_send_logs" data-i18n="send_logs_label">Send Logs</button>
