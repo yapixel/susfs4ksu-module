@@ -1,3 +1,18 @@
+## v1.5.2+ Revision 29
+### WebUI
+* Add Priority UID Filter configuration and management
+    * Check `CONFIG_KSU_SUSFS_PRIORITY_UID_FILTER` compile flag instead of version check
+    * Interactive package selector dialog with live search, system apps toggle, and batch select/deselect
+    * Custom settings page cards for configured packages with one-click removal
+    * Hot-reload live updates (`susfs set_priority_uid_filter`) and persist to `priority_uid_filter.txt`
+    * Standardized card & dialog design: bounded page and modal widths, consistent `font-amongus2` typography, and standard OK confirm action
+    * Complete multi-language localization across 18 languages
+
+### CI & Build
+* Add automated packaging and release workflow for tag releases
+* Fix GitHub Actions permissions and sync between `webui` and `v1.5.2+` branches
+* Restrict Crowdin workflows to manual trigger on forks
+
 ## v1.5.2+ Revision 28
 ### Notes
 Sorry for the very late update. This update focuses on WebUI configuration import/export, boot-stage script performance and correctness fixes, and better handling of newer susfs (v2.0.0+/v2.1.0+) kernel implementations.

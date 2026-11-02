@@ -41,6 +41,7 @@ jobs:
             -x "*tests*" \
             -x "README.md" \
             -x "LICENSE"
+          cp "ksu_module_susfs_1.5.2+_${{ env.BUILD_ID }}.zip" "ksu_module_susfs_1.5.2+.zip"
 
       - name: Upload release artifact
         uses: actions/upload-artifact@v4
@@ -52,4 +53,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         uses: softprops/action-gh-release@v2
         with:
-          files: ksu_module_susfs_1.5.2+_${{ env.BUILD_ID }}.zip
+          files: |
+            ksu_module_susfs_1.5.2+_${{ env.BUILD_ID }}.zip
+            ksu_module_susfs_1.5.2+.zip
