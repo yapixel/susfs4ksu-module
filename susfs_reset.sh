@@ -54,7 +54,7 @@ while IFS= read -r line; do
     # Extract key name before = sign
     key=$(echo "$line" | cut -d'=' -f1)
     # Reset the key to its default value
-    if echo $key | grep -q -E 'hide_sus_mnts_for_all_or_non_su_procs|susfs_log'; then
+    if echo $key | grep -q -E 'hide_sus_mnts_for_all_or_non_su_procs|susfs_log|priority_uid_filter'; then
         sed -i "s/^$key=.*/$key=1/" "$config/config.sh"
         continue
     elif echo $key | grep -q -E 'kernel_version|kernel_build'; then
@@ -78,6 +78,8 @@ echo -e "# this contains suspicious mounts you want \n# to be sus_mounted at pos
 echo -e "# this contains suspicious mounts you want \n# to be try_umounted at post-mount.sh\n# example\n# /system\n# /system_ext\n# /debug_ramdisk" > "$config/try_umount.txt"
 # Reset sus_open_redirect.txt
 echo -e "# this contains paths you want to redirect with\n# open redirect at boot-completed.sh or service.sh\n# example format\n# 0 = Execute on boot-completed.sh\n# 1 = Execute on service.sh\n# <original_path> <redirected_path> <0 or 1>\n# /system/bin/service /data/adb/susfs4ksu/service_redirected 0" > "$config/sus_open_redirect.txt"
+# Reset priority_uid_filter.txt
+echo -e "# Enter app package names to hide from getpriority/setpriority syscalls (one per line)\n# Lines starting with '#' are ignored.\n#\n# Examples:\n# com.termux\n# org.frknkrc44.hma_oss\n# io.github.vvb2060.keyattestation" > "$config/priority_uid_filter.txt"
 # Reset legit_mounts.txt
 printf "$legit_mounts" > "$config/legit_mounts.txt"
 # Reset sus_kstat_statically.json

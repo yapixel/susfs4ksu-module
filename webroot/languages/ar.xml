@@ -33,6 +33,7 @@
   <!-- Home Page -->
   <string id="kernel_version_label">إصدار الكيرنيل</string>
   <string id="sus_path_label">SUS PATH</string>
+  <string id="priority_uid_filter_label">PRIORITY UID FILTER</string>
   <string id="sus_map_label">SUS MAPS</string>
   <string id="sus_mount_label">SUS MOUNT</string>
   <string id="try_umount_label">TRY UMOUNT</string>
@@ -42,6 +43,7 @@
   <!-- Status Page -->
   <string id="kernel_features_label">حالة مميزات الكيرنيل</string>
   <string id="sus_path_feature_label">دعم SUS Path</string>
+  <string id="priority_uid_filter_feature_label">Priority UID Filter Support</string>
   <string id="sus_map_feature_label">دعم SUS Maps</string>
   <string id="sus_mount_feature_label">دعم SUS Mount</string>
   <string id="sus_kstat_feature_label">دعم SUS Kstat</string>
@@ -96,6 +98,7 @@
   <string id="hide_compat_matrix_label">إخفاء compat matrix</string>
   <string id="fake_service_list_label">تزييف قائمة الخدمات</string>
   <string id="hide_gapps_label">إخفاء تطبيقات جوجل</string>
+  <string id="priority_uid_filter_toggle_label">Priority UID Filter</string>
   <string id="hide_revanced_label">إخفاء YouTube/YT-Music (Revanced)</string>
   <string id="spoof_cmdline_label">تزييف cmdline</string>
   <string id="hide_ksu_loop_label">إخفاء حلقة KSU</string>
@@ -104,6 +107,7 @@
   <string id="emulate_vold_app_data_label">محاكاة عزل بيانات تطبيق Vold</string>
   <string id="custom_sus_path_label">مسار SUS مخصص</string>
   <string id="custom_sus_path_loop_label">مسار SUS Path معدل</string>
+  <string id="custom_priority_uid_filter_label">Custom Priority UID Filter</string>
   <string id="custom_sus_maps_label">SUS Maps مخصص</string>
   <string id="custom_sus_mount_label">SUS mount مخصص</string>
   <string id="custom_try_umount_label">TRY umount مخصص</string>

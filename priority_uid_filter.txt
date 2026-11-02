@@ -1,0 +1,7 @@
+# Enter app package names to hide from getpriority/setpriority syscalls (one per line)
+# Lines starting with '#' are ignored.
+#
+# Examples:
+# com.termux
+# org.frknkrc44.hma_oss
+# io.github.vvb2060.keyattestation

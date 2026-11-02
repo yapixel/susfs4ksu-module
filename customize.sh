@@ -150,7 +150,7 @@ fi
 ui_print "[-] Preparing susfs4ksu persistent directory"
 PERSISTENT_DIR=/data/adb/susfs4ksu
 [ ! -d /data/adb/susfs4ksu ] && mkdir -p $PERSISTENT_DIR
-files="sus_mount.txt try_umount.txt sus_path.txt sus_path_loop.txt sus_maps.txt sus_open_redirect.txt legit_mounts.txt sus_kstat_statically.json config.sh"
+files="sus_mount.txt try_umount.txt sus_path.txt sus_path_loop.txt sus_maps.txt sus_open_redirect.txt legit_mounts.txt priority_uid_filter.txt sus_kstat_statically.json config.sh"
 for i in $files ; do
     if [ ! -f $PERSISTENT_DIR/$i ] ; then
         # If file doesn't exist, create it

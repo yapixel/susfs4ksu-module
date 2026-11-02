@@ -95,6 +95,14 @@ if echo "$susfs_features" | grep -q "CONFIG_KSU_SUSFS_SUS_MAP"; then
 	done
 fi
 
+# Add priority_uid_filter (v2.0.0+)
+if [ "${priority_uid_filter:-1}" -ne 0 ] && [ -f "$PERSISTENT_DIR/priority_uid_filter.txt" ]; then
+	pkgs=$(grep -v "^#" "$PERSISTENT_DIR/priority_uid_filter.txt" | grep -v "^[[:space:]]*$" | tr '\n' ',' | sed 's/,$//')
+	if [ -n "$pkgs" ]; then
+		${SUSFS_BIN} set_priority_uid_filter "$pkgs" && echo "[priority_uid_filter]: susfs4ksu/boot-completed $pkgs" >> $logfile1
+	fi
+fi
+
 # Add sus_kstat_statically entries from JSON (late v1.5.8+)
 if [ -f "$PERSISTENT_DIR/sus_kstat_statically.json" ]; then
 	# Parse JSON and add sus_kstat_statically entries

@@ -33,6 +33,7 @@
   <!-- Home Page -->
   <string id="kernel_version_label">Версия ядра</string>
   <string id="sus_path_label">Путей SUS</string>
+  <string id="priority_uid_filter_label">PRIORITY UID FILTER</string>
   <string id="sus_map_label">SUS MAPS</string>
   <string id="sus_mount_label">Смонтировано SUS</string>
   <string id="try_umount_label">Размонтировано</string>
@@ -42,6 +43,7 @@
   <!-- Status Page -->
   <string id="kernel_features_label">Статус функций ядра</string>
   <string id="sus_path_feature_label">Поддержка путей SUS</string>
+  <string id="priority_uid_filter_feature_label">Priority UID Filter Support</string>
   <string id="sus_map_feature_label">Поддержка SUS Maps</string>
   <string id="sus_mount_feature_label">Поддержка монтирования SUS</string>
   <string id="sus_kstat_feature_label">Поддержка SUS Kstat</string>
@@ -96,6 +98,7 @@
   <string id="hide_compat_matrix_label">Скрыть Compat Matrix</string>
   <string id="fake_service_list_label">Подмена Service List</string>
   <string id="hide_gapps_label">Скрыть GApps</string>
+  <string id="priority_uid_filter_toggle_label">Priority UID Filter</string>
   <string id="hide_revanced_label">Скрыть Revanced (YT/YTM)</string>
   <string id="spoof_cmdline_label">Подмена Cmdline</string>
   <string id="hide_ksu_loop_label">Скрыть KSU Loop</string>
@@ -104,6 +107,7 @@
   <string id="emulate_vold_app_data_label">Эмулировать изоляцию данных приложений</string>
   <string id="custom_sus_path_label">Свой путь SUS</string>
   <string id="custom_sus_path_loop_label">Свой путь SUS Loop</string>
+  <string id="custom_priority_uid_filter_label">Custom Priority UID Filter</string>
   <string id="custom_sus_maps_label">Свой SUS Maps</string>
   <string id="custom_sus_mount_label">Свой SUS Mount</string>
   <string id="custom_try_umount_label">Свой Try Umount</string>
