@@ -1,3 +1,8 @@
+## v1.5.2+ Revision 30
+### WebUI
+* Restore Custom Settings page container layout, width, and alignment to match Main Menu
+* Change custom feature editor confirm button text to OK
+
 ## v1.5.2+ Revision 29
 ### WebUI
 * Add Priority UID Filter configuration and management
