@@ -75,14 +75,14 @@ EOF`)}catch(h){console.error("Error saving kstat data:",h),_("Failed to save kst
 ${e}
 EOF`);const o=B.join(",");o&&await n(`${b} set_priority_uid_filter "${o}"`).catch(()=>{});const i=document.getElementById("custom_feature_select"),s=document.getElementById("custom_feature_textarea");return i&&i.value==="PRIORITY_UID_FILTER"&&s&&(s.value=`# Priority UID Filter
 ${e}`),!0}catch(e){return console.error("Failed to save priority_uid_filter.txt:",e),!1}}function Z(){const t=document.getElementById("priority_pkg_entries_list"),e=document.getElementById("priority_pkg_count");if(t){if(e&&(e.textContent=`${B.length} package${B.length===1?"":"s"} configured`),B.length===0){t.innerHTML=`
-			<p class="text-white/60 text-xs font-sans text-center py-3" data-i18n="no_packages_configured_label">
+			<p class="text-white/60 text-base font-amongus2 text-center py-3" data-i18n="no_packages_configured_label">
 				${window.i18n?window.i18n.getTranslation("no_packages_configured_label"):"No packages configured. Click 'Select Packages' to add."}
 			</p>
 		`;return}t.innerHTML=B.map(o=>`
-		<div class="flex justify-between items-center p-3 bg-cyan-100/10 border border-cyan-200/30 rounded font-sans normal-case">
+		<div class="flex justify-between items-center p-3 bg-cyan-100/10 border border-cyan-200/30 rounded">
 			<div class="flex-grow min-w-0 overflow-hidden pr-2">
 				<p class="text-white font-bold text-sm truncate min-w-0 w-full overflow-hidden">${K(o)}</p>
-				<p class="text-cyan-300 text-xs">Priority UID Filter</p>
+				<p class="text-cyan-300 text-base font-amongus2 font-bold tracking-wider uppercase">Priority UID Filter</p>
 			</div>
 			<div class="flex gap-2 flex-shrink-0">
 				<button class="btn btn-ghost btn-sm p-2 text-white hover:bg-red-500/30" onclick="window.removePriorityPkg('${K(o)}')">
@@ -92,9 +92,9 @@ ${e}`),!0}catch(e){return console.error("Failed to save priority_uid_filter.txt:
 				</button>
 			</div>
 		</div>
-	`).join("")}}window.removePriorityPkg=async t=>{const e=B.filter(i=>i!==t);await $e(e)&&(Z(),_(`Removed ${t}`))};async function Le(){const t=document.getElementById("priority_pkgs_modal");if(!t)return;x=new Set(B),H();const e=document.getElementById("priority_pkg_search_input");e&&(e.value=""),t.showModal(),await Be(!1)}window.openPriorityPackageModal=Le;async function Be(t){const e=document.getElementById("priority_modal_pkg_list");e&&(e.innerHTML='<p class="text-cyan-300 text-xs font-sans text-center py-4">Loading installed packages...</p>');try{const s=(await n(t?"pm list packages | cut -d: -f2":"pm list packages -3 | cut -d: -f2")).split(`
-`).map(c=>c.trim()).filter(c=>c.length>0),d=new Set([...B,...s]);N=Array.from(d).sort((c,m)=>{const r=x.has(c),f=x.has(m);return r&&!f?-1:!r&&f?1:c.localeCompare(m)})}catch(o){console.error("Failed to load packages via pm:",o),N=Array.from(new Set(B))}D(document.getElementById("priority_pkg_search_input")?.value||"")}function H(){const t=document.getElementById("priority_modal_selected_count");t&&(t.textContent=`${x.size} selected`)}function D(t){const e=document.getElementById("priority_modal_pkg_list");if(!e)return;const o=(t||"").trim().toLowerCase(),i=N.filter(s=>!o||s.toLowerCase().includes(o));if(i.length===0){e.innerHTML='<p class="text-white/60 text-xs font-sans text-center py-4">No packages match the search criteria.</p>';return}e.innerHTML=i.map(s=>{const d=x.has(s);return`
-			<label class="flex justify-between items-center p-2.5 bg-cyan-100/10 border border-cyan-200/30 rounded font-sans normal-case cursor-pointer hover:bg-cyan-100/20 transition-colors">
+	`).join("")}}window.removePriorityPkg=async t=>{const e=B.filter(i=>i!==t);await $e(e)&&(Z(),_(`Removed ${t}`))};async function Le(){const t=document.getElementById("priority_pkgs_modal");if(!t)return;x=new Set(B),H();const e=document.getElementById("priority_pkg_search_input");e&&(e.value=""),t.showModal(),await Be(!1)}window.openPriorityPackageModal=Le;async function Be(t){const e=document.getElementById("priority_modal_pkg_list");e&&(e.innerHTML='<p class="text-cyan-300 text-sm font-amongus2 text-center py-4 uppercase tracking-wider">Loading installed packages...</p>');try{const s=(await n(t?"pm list packages | cut -d: -f2":"pm list packages -3 | cut -d: -f2")).split(`
+`).map(c=>c.trim()).filter(c=>c.length>0),d=new Set([...B,...s]);N=Array.from(d).sort((c,m)=>{const r=x.has(c),f=x.has(m);return r&&!f?-1:!r&&f?1:c.localeCompare(m)})}catch(o){console.error("Failed to load packages via pm:",o),N=Array.from(new Set(B))}D(document.getElementById("priority_pkg_search_input")?.value||"")}function H(){const t=document.getElementById("priority_modal_selected_count");t&&(t.textContent=`${x.size} selected`)}function D(t){const e=document.getElementById("priority_modal_pkg_list");if(!e)return;const o=(t||"").trim().toLowerCase(),i=N.filter(s=>!o||s.toLowerCase().includes(o));if(i.length===0){e.innerHTML='<p class="text-white/60 text-sm font-amongus2 text-center py-4 uppercase">No packages match the search criteria.</p>';return}e.innerHTML=i.map(s=>{const d=x.has(s);return`
+			<label class="flex justify-between items-center p-2.5 bg-cyan-100/10 border border-cyan-200/30 rounded cursor-pointer hover:bg-cyan-100/20 transition-colors">
 				<div class="flex items-center gap-3 min-w-0 overflow-hidden flex-1">
 					<input type="checkbox" class="checkbox checkbox-sm checkbox-primary border-white" data-pkg="${K(s)}" ${d?"checked":""} />
 					<span class="text-white text-sm font-bold truncate">${K(s)}</span>
