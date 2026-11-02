@@ -31,7 +31,8 @@ jobs:
             sed -i "s/version=v1.5.2-R.*/version=v1.5.2-CI-${RANDOM_STRING}/" module.prop
           fi
 
-      - name: Upload release artifact
+      - name: Upload build artifact
+        if: "!startsWith(github.ref, 'refs/tags/')"
         uses: actions/upload-artifact@v4
         with:
           name: release-1.5.2+_${{ env.BUILD_ID }}
