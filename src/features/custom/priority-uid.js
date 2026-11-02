@@ -57,7 +57,7 @@ export function renderPriorityPackageList() {
 
 	if (configuredPackages.length === 0) {
 		listEl.innerHTML = `
-			<p class="text-white/60 text-xs font-sans text-center py-3" data-i18n="no_packages_configured_label">
+			<p class="text-white/60 text-base font-amongus2 text-center py-3" data-i18n="no_packages_configured_label">
 				${window.i18n ? window.i18n.getTranslation("no_packages_configured_label") : "No packages configured. Click 'Select Packages' to add."}
 			</p>
 		`;
@@ -65,10 +65,10 @@ export function renderPriorityPackageList() {
 	}
 
 	listEl.innerHTML = configuredPackages.map((pkg) => `
-		<div class="flex justify-between items-center p-3 bg-cyan-100/10 border border-cyan-200/30 rounded font-sans normal-case">
+		<div class="flex justify-between items-center p-3 bg-cyan-100/10 border border-cyan-200/30 rounded">
 			<div class="flex-grow min-w-0 overflow-hidden pr-2">
 				<p class="text-white font-bold text-sm truncate min-w-0 w-full overflow-hidden">${escapeHtml(pkg)}</p>
-				<p class="text-cyan-300 text-xs">Priority UID Filter</p>
+				<p class="text-cyan-300 text-base font-amongus2 font-bold tracking-wider uppercase">Priority UID Filter</p>
 			</div>
 			<div class="flex gap-2 flex-shrink-0">
 				<button class="btn btn-ghost btn-sm p-2 text-white hover:bg-red-500/30" onclick="window.removePriorityPkg('${escapeHtml(pkg)}')">
@@ -108,7 +108,7 @@ window.openPriorityPackageModal = openPriorityPackageModal;
 async function loadSystemPackages(includeSystem) {
 	const listContainer = document.getElementById("priority_modal_pkg_list");
 	if (listContainer) {
-		listContainer.innerHTML = `<p class="text-cyan-300 text-xs font-sans text-center py-4">Loading installed packages...</p>`;
+		listContainer.innerHTML = `<p class="text-cyan-300 text-sm font-amongus2 text-center py-4 uppercase tracking-wider">Loading installed packages...</p>`;
 	}
 
 	try {
@@ -150,14 +150,14 @@ function renderModalPackageList(filterText) {
 	const displayed = allPackages.filter(pkg => !filter || pkg.toLowerCase().includes(filter));
 
 	if (displayed.length === 0) {
-		listContainer.innerHTML = `<p class="text-white/60 text-xs font-sans text-center py-4">No packages match the search criteria.</p>`;
+		listContainer.innerHTML = `<p class="text-white/60 text-sm font-amongus2 text-center py-4 uppercase">No packages match the search criteria.</p>`;
 		return;
 	}
 
 	listContainer.innerHTML = displayed.map(pkg => {
 		const isChecked = tempSelectedPackages.has(pkg);
 		return `
-			<label class="flex justify-between items-center p-2.5 bg-cyan-100/10 border border-cyan-200/30 rounded font-sans normal-case cursor-pointer hover:bg-cyan-100/20 transition-colors">
+			<label class="flex justify-between items-center p-2.5 bg-cyan-100/10 border border-cyan-200/30 rounded cursor-pointer hover:bg-cyan-100/20 transition-colors">
 				<div class="flex items-center gap-3 min-w-0 overflow-hidden flex-1">
 					<input type="checkbox" class="checkbox checkbox-sm checkbox-primary border-white" data-pkg="${escapeHtml(pkg)}" ${isChecked ? 'checked' : ''} />
 					<span class="text-white text-sm font-bold truncate">${escapeHtml(pkg)}</span>

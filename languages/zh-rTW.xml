@@ -139,4 +139,5 @@
   <string id="deselect_all_label">取消全選</string>
   <string id="add_label">新增</string>
   <string id="no_packages_configured_label">未設定套件名稱，請點選「選擇應用」新增。</string>
+  <string id="ok_label">OK</string>
 </language>
