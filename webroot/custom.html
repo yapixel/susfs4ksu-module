@@ -6,8 +6,8 @@
 	<title>Document</title>
   <script type="module" crossorigin src="/assets/fade-4ApaDT9x.js"></script>
   <script type="module" crossorigin src="/assets/i18n-CuIujUHf.js"></script>
-  <script type="module" crossorigin src="/assets/index-BYHnJUWT.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-CVKuWAYB.css">
+  <script type="module" crossorigin src="/assets/index-D8GMnM3l.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B_f-V5_i.css">
 </head>
 
 <style>
@@ -185,7 +185,7 @@
         </dialog>
         <!-- End of Priority UID Filter Package Selector Modal -->
 		<div class="pt-3 pb-14">
-			<div class="flex justify-between items-center mx-auto ml-4 pt-4 mr-4">
+			<div class="flex justify-between items-center mx-auto px-4 pt-4 w-full max-w-lg">
 				<div class="flex flex-col">
 					<div class="font-bold text-4xl text-white font-amongus2 uppercase" data-i18n="custom_settings_label">Custom Settings</div>
 				</div>
@@ -194,8 +194,8 @@
                     <a href="index.html" class="text-white"><button class="btn btn-md btn-outline h-auto text-sm border-white mt-2 text-white" data-i18n="main_menu_label">main menu</button></a>
 				</div>
 			</div>
-			<section class="flex flex-col justify-start items-center min-h-fit ml-4 mr-4 uppercase font-bold">
-				<div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px]">
+			<section class="flex flex-col justify-start items-center min-h-fit mx-auto px-4 w-full max-w-lg uppercase font-bold">
+				<div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] w-full">
                     <div class="form-control">
                     <label class="label cursor-pointer">
                         <span class="text-white text-base" data-i18n="hide_gapps_label">Hide Gapps</span>
@@ -251,7 +251,7 @@
                         </label>
                     </div>
 				</div>
-                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px]">
+                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] w-full">
                     <h2 class="text-white text-xl font-bold mb-3" data-i18n="hide_paths_label">Hide Custom Rom Settings</h2>
                     <div class="form-control">
                         <label class="label cursor-pointer">
@@ -290,18 +290,18 @@
                         </label>
                     </div>
                 </div>
-                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px]" id="custom_feature_editor_section">
-                    <div class="form-control min-w-full sm:min-w-[400px]">
-                        <label class="label cursor-pointer justify-between items-center flex">
+                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] w-full" id="custom_feature_editor_section">
+                    <div class="form-control w-full">
+                        <label class="label cursor-pointer justify-between items-center flex flex-wrap gap-2">
                             <span class="text-white text-base font-bold" data-i18n="custom_sus_feature_select_label">Custom SUSFS Feature</span>
-                            <select id="custom_feature_select" class="select select-bordered select-sm max-w-[220px] text-white bg-black border-white text-base font-bold uppercase">
+                            <select id="custom_feature_select" class="select select-bordered select-sm max-w-[200px] text-white bg-black border-white text-base font-bold uppercase">
                             </select>
                         </label>
                     </div>
-                    <div class="form-control min-w-full sm:min-w-[400px]">
-                        <label class="label cursor-pointer justify-between items-center flex">
+                    <div class="form-control w-full">
+                        <label class="label cursor-pointer justify-between items-center flex flex-wrap gap-2">
                                <span class="text-white text-base" id="custom_feature_label" data-i18n="custom_sus_feature_editor_label">Custom Feature</span>
-                            <div class="flex flex-row gap-2">
+                            <div class="flex flex-row flex-wrap gap-2">
                                 <button class="btn btn-md btn-outline w-auto mt-2 border-white text-white text-base font-amongus2 uppercase hidden" id="select_packages_feature" data-i18n="select_packages_label">Select Packages</button>
                                 <button class="btn btn-md btn-outline w-auto mt-2 border-white text-white text-base font-normal" id="load_custom_feature" data-i18n="load_label">load</button>
                                 <button class="btn btn-md btn-outline w-auto mt-2 border-white text-white text-base font-normal" id="edit_custom_feature" data-i18n="edit_label">Edit with</button>
@@ -309,11 +309,11 @@
                         </label>
                     </div>
                     <div class="stat flex flex-col justify-center items-center p-0">
-                        <textarea class="textarea min-w-full font-sans h-48 leading-normal font-normal" placeholder="Press Load" id="custom_feature_textarea"></textarea>
+                        <textarea class="textarea w-full font-sans h-48 leading-normal font-normal" placeholder="Press Load" id="custom_feature_textarea"></textarea>
                         <button class="btn btn-md btn-outline w-24 mt-2 border-white text-white text-base font-normal" id="save_custom_feature" data-i18n="ok_label">OK</button>
                     </div>
                 </div>
-                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px] max-w-full overflow-hidden" id="custom_priority_uid_filter_section">
+                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] w-full overflow-hidden" id="custom_priority_uid_filter_section">
                     <div class="flex justify-between items-center mb-4">
                         <div>
                             <h2 class="text-white text-2xl font-bold font-amongus2 uppercase" data-i18n="custom_priority_uid_filter_label">Priority UID Filter</h2>
@@ -330,7 +330,7 @@
                         <!-- Generated package cards will be inserted here -->
                     </div>
                 </div>
-                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px] max-w-full overflow-hidden" id="custom_kstat_section">
+                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] w-full overflow-hidden" id="custom_kstat_section">
                     <div class="flex justify-between items-center mb-4">
                         <h2 class="text-white text-xl font-bold" data-i18n="custom_sus_kstat_label">Custom SUS_KSTAT</h2>
                         <button class="btn btn-sm btn-outline border-white text-white" id="add_kstat_entry">
