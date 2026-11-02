@@ -57,7 +57,7 @@ export function getCustomEditorFeatures(susfs_features, susfs_versions) {
 		});
 	}
 
-	if (versionAtLeast(susfs_versions, 2, 0, 0)) {
+	if (susfs_features.includes("CONFIG_KSU_SUSFS_PRIORITY_UID_FILTER")) {
 		features.push({
 			value: "PRIORITY_UID_FILTER",
 			valueKey: "priority_uid_filter_label",
@@ -136,6 +136,20 @@ export async function custom_feature_editor(susfs_features, susfs_versions) {
 		editBtn.onclick = async () => {
 			await run(`am start -a android.intent.action.VIEW -t text/plain -d file://${selected.filePath}`);
 		};
+
+		const selectPkgsBtn = document.getElementById("select_packages_feature");
+		if (selectPkgsBtn) {
+			if (selected.value === "PRIORITY_UID_FILTER") {
+				selectPkgsBtn.classList.remove("hidden");
+				selectPkgsBtn.onclick = () => {
+					if (window.openPriorityPackageModal) {
+						window.openPriorityPackageModal();
+					}
+				};
+			} else {
+				selectPkgsBtn.classList.add("hidden");
+			}
+		}
 	};
 
 	featureSelect.onchange = bindSelectedFeature;

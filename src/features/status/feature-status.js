@@ -5,7 +5,7 @@ export async function loadKernelFeatureStatus(susfs_features, susfs_versions) {
   const features = [
     { id: 'status_sus_path', config: 'CONFIG_KSU_SUSFS_SUS_PATH' },
 	{ id: 'status_sus_map', config: 'CONFIG_KSU_SUSFS_SUS_MAP' },
-	{ id: 'status_priority_uid_filter', version_main: 2, version_sub: 0, version_patch: 0 },
+	{ id: 'status_priority_uid_filter', config: 'CONFIG_KSU_SUSFS_PRIORITY_UID_FILTER' },
     { id: 'status_sus_mount', config: 'CONFIG_KSU_SUSFS_SUS_MOUNT' },
     { id: 'status_auto_default_mount', config: 'CONFIG_KSU_SUSFS_AUTO_ADD_SUS_KSU_DEFAULT_MOUNT' },
     { id: 'status_auto_bind_mount', config: 'CONFIG_KSU_SUSFS_AUTO_ADD_SUS_BIND_MOUNT' },

@@ -132,4 +132,11 @@
   <string id="import_config_label">Importa Config</string>
   <string id="import_warning_label">L'importazione di una configurazione sovrascriverà le impostazioni correnti. Sei sicuro di voler procedere?</string>
   <string id="import_backup_label">Backup Configurazione Corrente</string>
+  <string id="select_packages_label">Select Packages</string>
+  <string id="select_packages_title">Select Packages</string>
+  <string id="show_system_apps_label">Show system apps</string>
+  <string id="select_all_label">Select all</string>
+  <string id="deselect_all_label">Deselect all</string>
+  <string id="add_label">Add</string>
+  <string id="no_packages_configured_label">No packages configured. Click 'Select Packages' to add.</string>
 </language>

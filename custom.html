@@ -139,6 +139,48 @@
                 </div>
             </div>
         </dialog>
+        <!-- Priority UID Filter Package Selector Modal -->
+        <dialog id="priority_pkgs_modal" class="modal font-sans font-normal">
+            <div class="modal-box bg-black border-2 border-white w-11/12 max-w-2xl flex flex-col max-h-[85vh]">
+                <h3 class="font-bold text-xl text-white mb-3 font-amongus2 uppercase" data-i18n="select_packages_title">Select Packages</h3>
+                
+                <!-- Search and options bar -->
+                <div class="flex flex-col gap-2 mb-3">
+                    <input type="text" id="priority_pkg_search_input" class="input input-bordered input-sm bg-black border-white text-white font-sans w-full" placeholder="Search packages..." />
+                    <div class="flex justify-between items-center text-xs">
+                        <label class="label cursor-pointer gap-2 p-0">
+                            <input type="checkbox" id="priority_pkg_show_system" class="checkbox checkbox-xs checkbox-primary border-white" />
+                            <span class="text-white text-xs font-sans normal-case" data-i18n="show_system_apps_label">Show system apps</span>
+                        </label>
+                        <div class="flex items-center gap-2">
+                            <span class="text-cyan-300 text-xs font-sans normal-case" id="priority_modal_selected_count">0 selected</span>
+                            <button class="btn btn-xs btn-outline border-white text-white font-sans normal-case" id="priority_pkg_select_all" data-i18n="select_all_label">Select all</button>
+                            <button class="btn btn-xs btn-outline border-white text-white font-sans normal-case" id="priority_pkg_deselect_all" data-i18n="deselect_all_label">Deselect all</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom package input -->
+                <div class="flex gap-2 mb-3">
+                    <input type="text" id="priority_custom_pkg_input" class="input input-bordered input-sm bg-black border-white text-white font-sans flex-1" placeholder="Add custom package name..." />
+                    <button class="btn btn-sm btn-outline border-white text-white font-sans normal-case" id="priority_add_custom_pkg_btn" data-i18n="add_label">Add</button>
+                </div>
+
+                <!-- Scrollable list of packages -->
+                <div id="priority_modal_pkg_list" class="flex-1 overflow-y-auto space-y-2 min-h-[220px] max-h-[45vh] pr-1">
+                    <!-- Package rows -->
+                </div>
+
+                <div class="modal-action mt-4 font-amongus2">
+                    <button class="btn btn-outline border-white text-white" onclick="document.getElementById('priority_pkgs_modal').close()" data-i18n="cancel_label">Cancel</button>
+                    <button class="btn btn-primary text-white" id="priority_modal_save_btn">Make it SuS</button>
+                </div>
+            </div>
+            <form method="dialog" class="modal-backdrop">
+                <button></button>
+            </form>
+        </dialog>
+        <!-- End of Priority UID Filter Package Selector Modal -->
 		<div class="pt-3 pb-14">
 			<div class="flex justify-between items-center mx-auto ml-4 pt-4 mr-4">
 				<div class="flex flex-col">
@@ -257,6 +299,7 @@
                         <label class="label cursor-pointer justify-between items-center flex">
                                <span class="text-white text-base" id="custom_feature_label" data-i18n="custom_sus_feature_editor_label">Custom Feature</span>
                             <div class="flex flex-row gap-2">
+                                <button class="btn btn-md btn-outline w-auto mt-2 border-white text-white text-base font-normal hidden" id="select_packages_feature" data-i18n="select_packages_label">Select Packages</button>
                                 <button class="btn btn-md btn-outline w-auto mt-2 border-white text-white text-base font-normal" id="load_custom_feature" data-i18n="load_label">load</button>
                                 <button class="btn btn-md btn-outline w-auto mt-2 border-white text-white text-base font-normal" id="edit_custom_feature" data-i18n="edit_label">Edit with</button>
                             </div>
@@ -265,6 +308,23 @@
                     <div class="stat flex flex-col justify-center items-center p-0">
                         <textarea class="textarea min-w-full font-sans h-48 leading-normal font-normal" placeholder="Press Load" id="custom_feature_textarea"></textarea>
                         <button class="btn btn-md btn-outline w-24 mt-2 border-white text-white text-base font-normal" id="save_custom_feature">Make it SuS</button>
+                    </div>
+                </div>
+                <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px] max-w-full overflow-hidden" id="custom_priority_uid_filter_section">
+                    <div class="flex justify-between items-center mb-4">
+                        <div>
+                            <h2 class="text-white text-xl font-bold" data-i18n="custom_priority_uid_filter_label">Priority UID Filter</h2>
+                            <p class="text-cyan-300 text-xs font-sans normal-case mt-0.5" id="priority_pkg_count">0 packages configured</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline border-white text-white" id="manage_priority_pkgs_btn">
+                            <svg class="w-5 h-5 mr-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            <span class="font-sans normal-case text-xs" data-i18n="select_packages_label">Select Packages</span>
+                        </button>
+                    </div>
+                    <div id="priority_pkg_entries_list" class="space-y-3 overflow-hidden w-full min-w-0">
+                        <!-- Generated package cards will be inserted here -->
                     </div>
                 </div>
                 <div class="stats flex flex-col divide-x-0 divide-y-0 white:bg-cyan-100/20 bg-cyan-100/20 dark:bg-black/20 mt-5 border-2 p-4 border-white backdrop-blur-[2.5px] min-w-full sm:min-w-[400px] max-w-full overflow-hidden" id="custom_kstat_section">

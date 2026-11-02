@@ -4,6 +4,9 @@ on:
   push:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
@@ -11,7 +14,6 @@ jobs:
       - name: Checkout webui branch
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
           ref: webui
 
       - name: Get latest commit message
@@ -20,10 +22,15 @@ jobs:
           COMMIT_MSG=$(git log -1 --pretty=%s)
           echo "message=$COMMIT_MSG" >> $GITHUB_OUTPUT
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Build webui branch
         run: |
-           npm install
-           npm run build
+          npm ci || npm install
+          npm run build
 
       - name: Copy dist folder to a temporary location
         run: |
@@ -32,7 +39,6 @@ jobs:
       - name: Checkout v1.5.2+ branch
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
           ref: v1.5.2+
 
       - name: Remove old contents from webroot folder
@@ -46,8 +52,8 @@ jobs:
       - name: Commit & Push changes
         uses: actions-js/push@master
         with:
-          github_token: ${{ secrets.SUSFS4KSU_SECRET }}
-          author_email: "24408329+sidex15@users.noreply.github.com"
-          author_name: "sidex15"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          author_email: "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+          author_name: "${{ github.actor }}"
           message: "WebUI: ${{ steps.commit_message.outputs.message }}"
           branch: 'v1.5.2+'

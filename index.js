@@ -22,6 +22,7 @@ import { custom_toggles } from './src/features/custom/toggles.js';
 import { custom_rom_settings } from './src/features/custom/rom.js';
 import { custom_feature_editor } from './src/features/custom/feature-editor.js';
 import { custom_kstat_editor } from './src/features/custom/kstat.js';
+import { init_priority_uid_filter } from './src/features/custom/priority-uid.js';
 
 // Status page features
 import { loadKernelFeatureStatus } from './src/features/status/feature-status.js';
@@ -126,6 +127,7 @@ H.on('NAVIGATE_END', async ({ to, from, trigger, location }) => {
 		custom_rom_settings(settings);
 		custom_feature_editor(susfs_features, susfs_versions);
 		custom_kstat_editor();
+		init_priority_uid_filter(susfs_features);
 	} else if (currentPath === '/status.html') {
 		loadKernelFeatureStatus(susfs_features, susfs_versions);
 	}

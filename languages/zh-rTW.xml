@@ -132,4 +132,11 @@
   <string id="import_config_label">Import Config</string>
   <string id="import_warning_label">Importing a config will overwrite your current settings. Are you sure you want to proceed?</string>
   <string id="import_backup_label">Backup Current Config</string>
+  <string id="select_packages_label">選擇應用</string>
+  <string id="select_packages_title">選擇套件名稱</string>
+  <string id="show_system_apps_label">顯示系統應用</string>
+  <string id="select_all_label">全選</string>
+  <string id="deselect_all_label">取消全選</string>
+  <string id="add_label">新增</string>
+  <string id="no_packages_configured_label">未設定套件名稱，請點選「選擇應用」新增。</string>
 </language>
