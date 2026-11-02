@@ -33,6 +33,7 @@
   <!-- Home Page -->
   <string id="kernel_version_label">カーネルバージョン</string>
   <string id="sus_path_label">SUSパス</string>
+  <string id="priority_uid_filter_label">PRIORITY UID FILTER</string>
   <string id="sus_map_label">SUSマップ</string>
   <string id="sus_mount_label">SUSマウント</string>
   <string id="try_umount_label">アンマウント試行</string>
@@ -42,6 +43,7 @@
   <!-- Status Page -->
   <string id="kernel_features_label">カーネル機能状態</string>
   <string id="sus_path_feature_label">SUSパス対応</string>
+  <string id="priority_uid_filter_feature_label">Priority UID Filter Support</string>
   <string id="sus_map_feature_label">SUSマップ対応</string>
   <string id="sus_mount_feature_label">SUSマウント対応</string>
   <string id="sus_kstat_feature_label">SUSカーネル統計対応</string>
@@ -96,6 +98,7 @@
   <string id="hide_compat_matrix_label">Compat Matrix非表示</string>
   <string id="fake_service_list_label">サービスリスト偽装</string>
   <string id="hide_gapps_label">GApps非表示</string>
+  <string id="priority_uid_filter_toggle_label">Priority UID Filter</string>
   <string id="hide_revanced_label">Revanced (YT/YTM) 非表示</string>
   <string id="spoof_cmdline_label">Cmdline偽装</string>
   <string id="hide_ksu_loop_label">KSUループ非表示</string>
@@ -104,6 +107,7 @@
   <string id="emulate_vold_app_data_label">Voldアプリデータ分離エミュレート</string>
   <string id="custom_sus_path_label">カスタムSUSパス</string>
   <string id="custom_sus_path_loop_label">カスタムSUSパスループ</string>
+  <string id="custom_priority_uid_filter_label">Custom Priority UID Filter</string>
   <string id="custom_sus_maps_label">カスタムSUSマップ</string>
   <string id="custom_sus_mount_label">カスタムSUSマウント</string>
   <string id="custom_try_umount_label">カスタムアンマウント試行</string>

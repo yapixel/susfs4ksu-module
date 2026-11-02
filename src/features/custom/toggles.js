@@ -23,6 +23,7 @@ export async function custom_toggles(settings, susfs_versions) {
 		{ id: "spoof_cmdline", key: "spoof_cmdline" },
 		{ id: "hide_ksu_loop", key: "hide_loops" },
 		{ id: "force_hide_lsposed", key: "force_hide_lsposed" },
+		{ id: "priority_uid_filter", key: "priority_uid_filter" },
 	];
 
 	for (const { id, key } of simpleToggles) {

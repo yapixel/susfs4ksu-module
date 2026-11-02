@@ -57,6 +57,16 @@ export function getCustomEditorFeatures(susfs_features, susfs_versions) {
 		});
 	}
 
+	if (versionAtLeast(susfs_versions, 2, 0, 0)) {
+		features.push({
+			value: "PRIORITY_UID_FILTER",
+			valueKey: "priority_uid_filter_label",
+			labelKey: "custom_priority_uid_filter_label",
+			filePath: `${config}/priority_uid_filter.txt`,
+			featureName: "PRIORITY_UID_FILTER",
+		});
+	}
+
 	if (susfs_features.includes("CONFIG_KSU_SUSFS_OPEN_REDIRECT")) {
 		features.push({
 			value: "SUS_OPEN_REDIRECT",

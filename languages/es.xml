@@ -33,6 +33,7 @@
   <!-- Home Page -->
   <string id="kernel_version_label">Versión del Kernel</string>
   <string id="sus_path_label">RUTA SUS</string>
+  <string id="priority_uid_filter_label">PRIORITY UID FILTER</string>
   <string id="sus_map_label">SUS MAPS</string>
   <string id="sus_mount_label">MONTAJE SUS</string>
   <string id="try_umount_label">INTENTAR DESMONTAR</string>
@@ -42,6 +43,7 @@
   <!-- Status Page -->
   <string id="kernel_features_label">Kernel Features Status</string>
   <string id="sus_path_feature_label">SUS Path Support</string>
+  <string id="priority_uid_filter_feature_label">Priority UID Filter Support</string>
   <string id="sus_map_feature_label">SUS Maps Support</string>
   <string id="sus_mount_feature_label">SUS Mount Support</string>
   <string id="sus_kstat_feature_label">SUS Kstat Support</string>
@@ -96,6 +98,7 @@
   <string id="hide_compat_matrix_label">Ocultar Matriz de Compatibilidad</string>
   <string id="fake_service_list_label">Lista de Servicios Falsos</string>
   <string id="hide_gapps_label">Ocultar GApps</string>
+  <string id="priority_uid_filter_toggle_label">Priority UID Filter</string>
   <string id="hide_revanced_label">Ocultar ReVanced</string>
   <string id="spoof_cmdline_label">Suplantar Línea de Comandos</string>
   <string id="hide_ksu_loop_label">Ocultar Bucle KSU</string>
@@ -104,6 +107,7 @@
   <string id="emulate_vold_app_data_label">Emulate Vold App Data Isolation</string>
   <string id="custom_sus_path_label">Ruta SUS Personalizada</string>
   <string id="custom_sus_path_loop_label">Custom SUS Path Loop</string>
+  <string id="custom_priority_uid_filter_label">Custom Priority UID Filter</string>
   <string id="custom_sus_maps_label">Custom SUS Maps</string>
   <string id="custom_sus_mount_label">Montaje SUS Personalizado</string>
   <string id="custom_try_umount_label">Intento de Desmontaje Personalizado</string>

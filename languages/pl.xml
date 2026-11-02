@@ -33,6 +33,7 @@
   <!-- Home Page -->
   <string id="kernel_version_label">Wersja jądra</string>
   <string id="sus_path_label">Ścieżka SUS</string>
+  <string id="priority_uid_filter_label">PRIORITY UID FILTER</string>
   <string id="sus_map_label">Mapy SUS</string>
   <string id="sus_mount_label">Montowanie SUS</string>
   <string id="try_umount_label">Spróbuj odmontować</string>
@@ -42,6 +43,7 @@
   <!-- Status Page -->
   <string id="kernel_features_label">Status funkcji jądra</string>
   <string id="sus_path_feature_label">Obsługa ścieżki SUS</string>
+  <string id="priority_uid_filter_feature_label">Priority UID Filter Support</string>
   <string id="sus_map_feature_label">Wsparcie map SUS</string>
   <string id="sus_mount_feature_label">Obsługa montowania SUS</string>
   <string id="sus_kstat_feature_label">Obsługa SUS Kstat</string>
@@ -96,6 +98,7 @@
   <string id="hide_compat_matrix_label">Ukryj macierz zgodności</string>
   <string id="fake_service_list_label">Sfałszuj listę usług</string>
   <string id="hide_gapps_label">Ukryj GApps</string>
+  <string id="priority_uid_filter_toggle_label">Priority UID Filter</string>
   <string id="hide_revanced_label">Ukryj Revanced (YT/YTM)</string>
   <string id="spoof_cmdline_label">Sfałszuj komendy wiersza poleceń</string>
   <string id="hide_ksu_loop_label">Ukryj pętlę KSU</string>
@@ -104,6 +107,7 @@
   <string id="emulate_vold_app_data_label">Emuluj izolację danych aplikacji Vold</string>
   <string id="custom_sus_path_label">Niestandardowa ścieżka SUS</string>
   <string id="custom_sus_path_loop_label">Niestandardowa pętla ścieżki SUS</string>
+  <string id="custom_priority_uid_filter_label">Custom Priority UID Filter</string>
   <string id="custom_sus_maps_label">Niestandardowe mapy SUS</string>
   <string id="custom_sus_mount_label">Niestandardowe montowanie SUS</string>
   <string id="custom_try_umount_label">Niestandardowa próba odmontowania</string>
