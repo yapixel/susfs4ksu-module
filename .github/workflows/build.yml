@@ -31,7 +31,22 @@ jobs:
             sed -i "s/version=v1.5.2-R.*/version=v1.5.2-CI-${RANDOM_STRING}/" module.prop
           fi
 
+      - name: Upload release artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-1.5.2+_${{ env.BUILD_ID }}
+          path: |
+            ${{ github.workspace }}/**/*
+            !${{ github.workspace }}/.git/**
+            !${{ github.workspace }}/.github/**
+            !${{ github.workspace }}/node_modules/**
+            !${{ github.workspace }}/src/**
+            !${{ github.workspace }}/tests/**
+            !${{ github.workspace }}/README.md
+            !${{ github.workspace }}/LICENSE
+
       - name: Package flashable zip
+        if: startsWith(github.ref, 'refs/tags/')
         run: |
           zip -r "ksu_module_susfs_1.5.2+_${{ env.BUILD_ID }}.zip" . \
             -x "*.git*" \
@@ -42,12 +57,6 @@ jobs:
             -x "README.md" \
             -x "LICENSE"
           cp "ksu_module_susfs_1.5.2+_${{ env.BUILD_ID }}.zip" "ksu_module_susfs_1.5.2+.zip"
-
-      - name: Upload release artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: release-1.5.2+_${{ env.BUILD_ID }}
-          path: ksu_module_susfs_1.5.2+_${{ env.BUILD_ID }}.zip
 
       - name: Release on tag
         if: startsWith(github.ref, 'refs/tags/')
