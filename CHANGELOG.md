@@ -1,3 +1,12 @@
+## v1.5.2+ Revision 31
+### WebUI
+* Unify card width and alignment across Index, Custom Settings, and Status pages (`max-w-lg` container with full-width cards)
+* Fix card width bulging on tablets and landscape screens caused by flex shrink-wrap on button rows
+* Add responsive flex-wrap and input min-width constraints for Kernel Uname and Custom SuS cards
+
+### CI & Packaging
+* Fix double-compressed artifact uploads in GitHub Actions by uploading raw module tree directly
+
 ## v1.5.2+ Revision 30
 ### WebUI
 * Restore Custom Settings page container layout, width, and alignment to match Main Menu
